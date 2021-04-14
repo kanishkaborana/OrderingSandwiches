@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefHeight="588.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="538.0" prefWidth="383.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Sandwich Type:" />
+                        <ComboBox fx:id="cb_type" layoutX="170.0" layoutY="22.0" onAction="#on_cb_type" prefWidth="150.0" />
+                        <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Ingredients" underline="true" />
+                        <ListView fx:id="lv_basic_toppings" layoutX="14.0" layoutY="94.0" prefHeight="111.0" prefWidth="230.0" />
+                        <Text layoutX="14.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra Ingredients" underline="true" />
+                        <ListView fx:id="lv_all_extras" layoutX="14.0" layoutY="275.0" prefHeight="303.0" prefWidth="120.0" />
+                        <Text layoutX="14.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAX 6 extra ($1.99 each)" />
+                        <Button fx:id="btn_addTopping" layoutX="172.0" layoutY="332.0" mnemonicParsing="false" onAction="#on_adding_extras" text="Add &gt;&gt;" />
+                        <Button fx:id="btn_removeTopping" layoutX="161.0" layoutY="414.0" mnemonicParsing="false" onAction="#on_remove_topping" text="&lt;&lt; Remove" />
+                        <Button fx:id="btn_clear" layoutX="155.0" layoutY="497.0" mnemonicParsing="false" onAction="#on_clear" text="Clear Selected" />
+                        <ListView fx:id="lv_selected_extras" layoutX="260.0" layoutY="275.0" prefHeight="303.0" prefWidth="120.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefHeight="588.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="589.0" prefWidth="280.0">
+                    <children>
+                        <ImageView fx:id="sandwich_image" fitHeight="192.0" fitWidth="249.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text layoutX="16.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price $" />
+                        <TextArea fx:id="textarea_price" layoutX="10.0" layoutY="367.0" prefHeight="38.0" prefWidth="106.0" />
+                        <Button fx:id="btn_addOrder" layoutX="20.0" layoutY="427.0" mnemonicParsing="false" onAction="#on_add_to_order" text="Add to Order" />
+                        <Button fx:id="btn_showOrder" layoutX="175.0" layoutY="428.0" mnemonicParsing="false" onAction="#on_showOrder" text="Show Order" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </right>
+   <bottom>
+      <TextArea fx:id="tv_area" prefHeight="31.0" prefWidth="670.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

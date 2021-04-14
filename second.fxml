@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details" underline="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Text>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="lv_orders" layoutX="36.0" layoutY="75.0" prefHeight="458.0" prefWidth="307.0" />
+            <Button fx:id="btn_add" layoutX="474.0" layoutY="106.0" mnemonicParsing="false" onAction="#on_add" text="Add" />
+            <Text layoutX="380.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adds selected sandwich to the order again" />
+            <Button fx:id="btn_remove" layoutX="462.0" layoutY="182.0" mnemonicParsing="false" onAction="#on_remove" text="Remove" />
+            <Text layoutX="379.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Removes selected sandwich from the order" />
+            <Text layoutX="384.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clears entire order" />
+            <Button fx:id="btn_clear" layoutX="401.0" layoutY="388.0" mnemonicParsing="false" onAction="#on_clear" text="Clear" />
+            <Button fx:id="btn_save" layoutX="552.0" layoutY="389.0" mnemonicParsing="false" onAction="#on_save" text="Save" />
+            <Button fx:id="btn_back" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" onAction="#on_back" text="Back" />
+            <Text layoutX="519.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save order to a file" />
+            <Text layoutX="375.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total amount:" />
+            <TextArea fx:id="total_price" layoutX="463.0" layoutY="276.0" prefHeight="32.0" prefWidth="104.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
